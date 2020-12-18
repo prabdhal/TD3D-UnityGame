@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6dd1c46bce08c42b3eb2c9d0d35811, type: 3}
+  m_Name: ScorpianLv1
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 5034795013845535333, guid: 3c1ef37c4a68ed944bfbe6df45e319dd,
+    type: 3}
+  icon: {fileID: 21300000, guid: 5d025311da183ea4888717dc97c0481e, type: 3}
+  towerName: Scorpian Lv1
+  cost: 100
+  sellValue: 50
+  damageType: 0
+  minDamage: 0
+  maxDamage: 0
+  fireRate: 1
+  range: 6
+  effectType: 0
+  effectValue: 0
+  effectDuration: 0
+  effectDescription: 
+  upgrades: {fileID: 11400000, guid: ee934cffc2c01634fb035f24cdfd7416, type: 2}

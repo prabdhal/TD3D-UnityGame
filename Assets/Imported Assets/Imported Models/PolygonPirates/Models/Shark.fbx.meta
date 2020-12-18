@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: be364b4ac1703e944aa52277826d8f5d
+timeCreated: 1496954754
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: fin_01
+    100002: fin_01_l
+    100004: fin_01_r
+    100006: fin_02
+    100008: fin_02_l
+    100010: fin_02_r
+    100012: fin_03
+    100014: fin_03_l
+    100016: fin_03_r
+    100018: head_01
+    100020: jaw_01
+    100022: jaw_02
+    100024: neck_01
+    100026: nose_01
+    100028: pelvis
+    100030: //RootNode
+    100032: SK_Creature_Shark_01
+    100034: spine_01
+    100036: spine_02
+    100038: spine_03
+    100040: spine_04
+    100042: tail_01
+    100044: tail_02
+    100046: tail_03
+    100048: tail_04
+    100050: tail_05
+    400000: fin_01
+    400002: fin_01_l
+    400004: fin_01_r
+    400006: fin_02
+    400008: fin_02_l
+    400010: fin_02_r
+    400012: fin_03
+    400014: fin_03_l
+    400016: fin_03_r
+    400018: head_01
+    400020: jaw_01
+    400022: jaw_02
+    400024: neck_01
+    400026: nose_01
+    400028: pelvis
+    400030: //RootNode
+    400032: SK_Creature_Shark_01
+    400034: spine_01
+    400036: spine_02
+    400038: spine_03
+    400040: spine_04
+    400042: tail_01
+    400044: tail_02
+    400046: tail_03
+    400048: tail_04
+    400050: tail_05
+    4300000: SK_Creature_Shark_01
+    7400000: Swim
+    9500000: //RootNode
+    13700000: SK_Creature_Shark_01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Swim
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/fin_01_l
+        weight: 1
+      - path: pelvis/fin_01_l/fin_02_l
+        weight: 1
+      - path: pelvis/fin_01_l/fin_02_l/fin_03_l
+        weight: 1
+      - path: pelvis/fin_01_r
+        weight: 1
+      - path: pelvis/fin_01_r/fin_02_r
+        weight: 1
+      - path: pelvis/fin_01_r/fin_02_r/fin_03_r
+        weight: 1
+      - path: pelvis/neck_01
+        weight: 1
+      - path: pelvis/neck_01/head_01
+        weight: 1
+      - path: pelvis/neck_01/head_01/jaw_01
+        weight: 1
+      - path: pelvis/neck_01/head_01/jaw_01/jaw_02
+        weight: 1
+      - path: pelvis/neck_01/head_01/nose_01
+        weight: 1
+      - path: pelvis/spine_01
+        weight: 1
+      - path: pelvis/spine_01/fin_01
+        weight: 1
+      - path: pelvis/spine_01/fin_01/fin_02
+        weight: 1
+      - path: pelvis/spine_01/fin_01/fin_02/fin_03
+        weight: 1
+      - path: pelvis/spine_01/spine_02
+        weight: 1
+      - path: pelvis/spine_01/spine_02/spine_03
+        weight: 1
+      - path: pelvis/spine_01/spine_02/spine_03/spine_04
+        weight: 1
+      - path: pelvis/spine_01/spine_02/spine_03/spine_04/tail_01
+        weight: 1
+      - path: pelvis/spine_01/spine_02/spine_03/spine_04/tail_01/tail_02
+        weight: 1
+      - path: pelvis/spine_01/spine_02/spine_03/spine_04/tail_01/tail_02/tail_03
+        weight: 1
+      - path: pelvis/spine_01/spine_02/spine_03/spine_04/tail_01/tail_04
+        weight: 1
+      - path: pelvis/spine_01/spine_02/spine_03/spine_04/tail_01/tail_04/tail_05
+        weight: 1
+      - path: SK_Creature_Shark_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

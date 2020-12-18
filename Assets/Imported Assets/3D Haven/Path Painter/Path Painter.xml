@@ -1,0 +1,361 @@
+<?xml version="1.0" ?><doc>
+    <assembly>
+        <name>Path Painter</name>
+    </assembly>
+    <members>
+        <member name="T:PathPainterAPI.Painter">
+            <summary>
+            Path Painter - Painter API
+            </summary>
+        </member>
+        <member name="T:PathPainterAPI.Painter.EmbankmentCurve">
+            <summary>
+            Embankment Curve that determines how the path blends into the environment.
+            </summary>
+        </member>
+        <member name="T:PathPainterAPI.Painter.Noise">
+            <summary>
+            Noise type
+            </summary>
+        </member>
+        <member name="F:PathPainterAPI.Painter.Size">
+            <summary>
+            Width of the path surface.
+            </summary>
+        </member>
+        <member name="P:PathPainterAPI.Painter.EmbankmentSize">
+            <summary>
+            Width of the whole path including the embankment. Cannot be less than the <see cref="F:PathPainterAPI.Painter.Size"/>.
+            </summary>
+        </member>
+        <member name="F:PathPainterAPI.Painter.Elevation">
+            <summary>
+            Relative elevation of the path. Negative values can be used to carve into the terrain.
+            </summary>
+        </member>
+        <member name="F:PathPainterAPI.Painter.EmbankCurve">
+            <summary>
+            Embankment Curve that determines how the path blends into the environment.
+            </summary>
+        </member>
+        <member name="P:PathPainterAPI.Painter.EvenRamp">
+            <summary>
+            [0-1 Normalized];
+              0: follow terrain;
+              1: the ramp slope will be even from start to end.
+            </summary>
+        </member>
+        <member name="P:PathPainterAPI.Painter.TextureStrength">
+            <summary>
+            [0-1 Normalized] Strength of the texture painting.
+            </summary>
+        </member>
+        <member name="F:PathPainterAPI.Painter.TextureIndex">
+            <summary>
+            Index of the texture wished to be used for the Path surface. Non-valid index results in no texture painted for the Path surface.
+            </summary>
+        </member>
+        <member name="F:PathPainterAPI.Painter.EmbankmentTextureIndex">
+            <summary>
+            Index of the texture wished to be used for the Embankment. Non-valid index results in no texture painted for the Embankment.
+            </summary>
+        </member>
+        <member name="F:PathPainterAPI.Painter.SmartTexturePaint">
+            <summary>
+            Disable if Embankment painting is desired over areas with Path surface texture.
+            </summary>
+        </member>
+        <member name="F:PathPainterAPI.Painter.ClearGrass">
+            <summary>
+            Clear/thin details/grass when drawing paths according to the settings: <see cref="P:PathPainterAPI.Painter.GrassClearingDistance"/>, <see cref="P:PathPainterAPI.Painter.GrassThinningDistance"/>, <see cref="F:PathPainterAPI.Painter.GrassClearingNoise"/>.
+            </summary>
+        </member>
+        <member name="P:PathPainterAPI.Painter.GrassClearingDistance">
+            <summary>
+            [Value 0.01-1] Grass Clearing Distance Ratio (ratio of one side-embankment width). Grass will be cleared up to this distance.
+            </summary>
+        </member>
+        <member name="P:PathPainterAPI.Painter.GrassThinningDistance">
+            <summary>
+            [0.01-1 Normalized] Grass Thinning Distance Ratio (ratio of one side-embankment width). Grass will be thinned with <see cref="F:PathPainterAPI.Painter.GrassClearingNoise"/> applied from the <see cref="P:PathPainterAPI.Painter.GrassClearingDistance"/> up to this distance.
+            </summary>
+        </member>
+        <member name="F:PathPainterAPI.Painter.GrassClearingNoise">
+            <summary>
+            The type of <see cref="T:PathPainterAPI.Painter.Noise"/> applied to Grass Thinning.
+            </summary>
+        </member>
+        <member name="F:PathPainterAPI.Painter.ClearTree">
+            <summary>
+            Clear trees when drawing paths according to the settings: <see cref="P:PathPainterAPI.Painter.TreeClearingDistance"/>.
+            </summary>
+        </member>
+        <member name="P:PathPainterAPI.Painter.TreeClearingDistance">
+            <summary>
+            [0.01-1 Normalized] Tree Clearing Distance Ratio (ratio of one side-embankment width). Trees will be cleared up to this distance.
+            </summary>
+        </member>
+        <member name="F:PathPainterAPI.Painter.SmoothPath">
+            <summary>
+            Paint smooth paths when enabled..
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Painter.SetDefaults">
+            <summary>
+            Reset the Default options/settings.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Painter.Paint(System.Collections.Generic.List{UnityEngine.Vector3},System.Single,System.Single,PathPainterAPI.Painter.EmbankmentCurve,System.Single,System.Single,System.Single,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Single,System.Single,PathPainterAPI.Painter.Noise,System.Boolean,System.Single,System.Boolean)">
+            <summary>
+            Change all the <see cref="T:PathPainterAPI.Painter"/> settings and Paint a Path.
+            </summary>
+            <param name="nodes">World space nodes that determine points of the path to be painted (similar to how mouse movement could be used by recording a point every time the mouse moves a certain distance). Note: Y values are ignored.</param>
+            <param name="size">Width of the path surface.</param>
+            <param name="embankmentSize">Width of the whole path including the embankment. Cannot be less than the <see cref="F:PathPainterAPI.Painter.Size"/>.</param>
+            <param name="embankmentCurve">Embankment Curve that determines how the path blends into the environment.</param>
+            <param name="elevation">Relative elevation of the path. Negative values can be used to carve into the terrain.</param>
+            <param name="evenRamp">[Value 0-1];
+              0: follow terrain;
+              1: the ramp slope will be even from start to end.</param>
+            <param name="textureStrength">[Value 0-1] Strength of the texture painting.</param>
+            <param name="textureIndex">Index of the texture wished to be used for the Path surface. Non-valid index results in no texture painted for the Path surface.</param>
+            <param name="embankmentTextureIndex">Index of the texture wished to be used for the Embankment. Non-valid index results in no texture painted for the Embankment.</param>
+            <param name="smartTexturePaint">Disable if Embankment painting is desired over areas with Path surface texture.</param>
+            <param name="clearGrass">Clear/thin details/grass when drawing paths according to the settings: <see cref="P:PathPainterAPI.Painter.GrassClearingDistance"/>, <see cref="P:PathPainterAPI.Painter.GrassThinningDistance"/>, <see cref="F:PathPainterAPI.Painter.GrassClearingNoise"/>.</param>
+            <param name="grassClearingDistance">[Value 0.01-1] Grass Clearing Distance Ratio (ratio of one side-embankment width). Grass will be cleared up to this distance.</param>
+            <param name="grassThinningDistance">[Value 0.01-1] Grass Thinning Distance Ratio (ratio of one side-embankment width). Grass will be thinned with <see cref="F:PathPainterAPI.Painter.GrassClearingNoise"/> applied from the <see cref="P:PathPainterAPI.Painter.GrassClearingDistance"/> up to this distance.</param>
+            <param name="grassClearingNoise">The type of <see cref="T:PathPainterAPI.Painter.Noise"/> applied to Grass Thinning.</param>
+            <param name="clearTree">Clear trees when drawing paths according to the settings: <see cref="P:PathPainterAPI.Painter.TreeClearingDistance"/>.</param>
+            <param name="treeClearingDistance">[Value 0.01-1] Tree Clearing Distance Ratio (ratio of one side-embankment width). Trees will be cleared up to this distance.</param>
+            <param name="smoothPath">Paint smooth paths when enabled..</param>
+        </member>
+        <member name="M:PathPainterAPI.Painter.Paint(System.Collections.Generic.List{UnityEngine.Vector3},PathPainterAPI.PaintOption[])">
+            <summary>
+            Paint a Path using the current <see cref="T:PathPainterAPI.Painter"/> settings while optionally changing any settings as desired. <seealso cref="T:PathPainterAPI.Paint"/> to pass in options.
+            </summary>
+            <param name="nodes">World space nodes that determine points of the path to be painted (similar to how mouse movement could be used by recording a point every time the mouse moves a certain distance). Note: Y values are ignored.</param>
+            <param name="options">An optional list of <see cref="T:PathPainterAPI.Paint"/> options that specify the painting properties. Any values passed in here will change the presets.
+            See Also: <see cref="T:PathPainterAPI.Paint"/>.</param>
+        </member>
+        <member name="M:PathPainterAPI.Painter.Paint(System.Collections.Generic.List{UnityEngine.Vector3})">
+            <summary>
+            Paint a Path using the current <see cref="T:PathPainterAPI.Painter"/> settings.
+            </summary>
+            <param name="nodes">World space nodes that determine points of the path to be painted (similar to how mouse movement could be used by recording a point every time the mouse moves a certain distance). Note: Y values are ignored.</param>
+        </member>
+        <member name="T:PathPainterAPI.PaintOption">
+            <summary>
+            Class internally used to pass Paint options to Path Painter API functions. You don't use these directly, but construct them with the control functions in the PathPainterAPI class.
+            </summary>
+        </member>
+        <member name="T:PathPainterAPI.PaintOption.PaintOptionType">
+            <summary>
+            The type of Paint Options.
+            </summary>
+        </member>
+        <member name="P:PathPainterAPI.PaintOption.Type">
+            <summary>
+            The type of the Paint Option.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.PaintOption.#ctor(PathPainterAPI.PaintOption.PaintOptionType,System.Object)">
+            <summary>
+            New option.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.PaintOption.ApplyOptions(PathPainterAPI.PaintOption[])">
+            <summary>
+            Applies the options to the API
+            </summary>
+        </member>
+        <member name="T:PathPainterAPI.Paint">
+            <summary>
+            Use methods of this class to ge Paint options parameters.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.Size(System.Single)">
+            <summary>
+            Option passed to the Path Painter API to set the Width of the path surface.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.EmbankmentSize(System.Single)">
+            <summary>
+            Option passed to the Path Painter API to set the Width of the whole path including the embankment. Cannot be less than the <see cref="M:PathPainterAPI.Paint.Size(System.Single)"/>.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.Elevation(System.Single)">
+            <summary>
+            Option passed to the Path Painter API to set the Relative elevation of the path. Negative values can be used to carve into the terrain.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.EmbankCurve(PathPainterAPI.Painter.EmbankmentCurve)">
+            <summary>
+            Option passed to the Path Painter API to set the Embankment Curve that determines how the path blends into the envirionment.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.EvenRamp(System.Single)">
+            <summary>
+            Option passed to the Path Painter API to set the EvenRamp value.
+            [Value 0-1];
+              0: follow terrain;
+              1: the ramp slope will be even from start to end.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.TextureStrength(System.Single)">
+            <summary>
+            [Value 0-1] Option passed to the Path Painter API to set the Strength of the textre painting.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.TextureIndex(System.Int32)">
+            <summary>
+            Option passed to the Path Painter API to set the Index of the texture wished to be used for the Path surface. Non-valid index results in no texture painted for the Path surface.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.EmbankmentTextureIndex(System.Int32)">
+            <summary>
+            Option passed to the Path Painter API to set the Index of the texture wished to be used for the Embankment. Non-valid index results in no texture painted for the Embankment.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.SmartTexturePaint(System.Boolean)">
+            <summary>
+            Option passed to the Path Painter API to set Smart Texture Paint. Disable if Emebankment painting is desired over areas with Path surface texture.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.ClearGrass(System.Boolean)">
+            <summary>
+            Option passed to the Path Painter API to enable/disable Clearing/thinning of details/grass when drawing paths according to the settings: <see cref="M:PathPainterAPI.Paint.GrassClearingDistance(System.Single)"/>, <see cref="M:PathPainterAPI.Paint.GrassThinningDistance(System.Single)"/>, <see cref="M:PathPainterAPI.Paint.GrassClearingNoise(PathPainterAPI.Painter.Noise)"/>.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.GrassClearingDistance(System.Single)">
+            <summary>
+            [Value 0.01-1] Option passed to the Path Painter API to set the Grass Clearing Discance Ratio (ratio of one side-embankment width). Grass will be cleared up to this distance.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.GrassThinningDistance(System.Single)">
+            <summary>
+            [Value 0.01-1] Option passed to the Path Painter API to set the Grass Thinning Discance Ratio (ratio of one side-embankment width). Grass will be thinned with <see cref="M:PathPainterAPI.Paint.GrassClearingNoise(PathPainterAPI.Painter.Noise)"/> applied from the <see cref="M:PathPainterAPI.Paint.GrassClearingDistance(System.Single)"/> up to this distance.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.GrassClearingNoise(PathPainterAPI.Painter.Noise)">
+            <summary>
+            Option passed to the Path Painter API to set the type of <see cref="!:Noise"/> applied to Grass Thinning.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.ClearTree(System.Boolean)">
+            <summary>
+            Option passed to the Path Painter API to set enable/disable Tree Clearing when drawing paths according to the settings: <see cref="M:PathPainterAPI.Paint.TreeClearingDistance(System.Single)"/>.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.TreeClearingDistance(System.Single)">
+            <summary>
+            [Value 0.01-1] Option passed to the Path Painter API to set the Tree Clearing Discance Ratio (ratio of one side-embankment width). Trees will be cleared up to this distance.
+            </summary>
+        </member>
+        <member name="M:PathPainterAPI.Paint.SmoothPath(System.Boolean)">
+            <summary>
+            Option passed to the Path Painter API to enable/disable Path Smoothing for better results.
+            </summary>
+        </member>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </members>
+</doc>

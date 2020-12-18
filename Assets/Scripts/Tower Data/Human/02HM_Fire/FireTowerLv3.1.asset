@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6dd1c46bce08c42b3eb2c9d0d35811, type: 3}
+  m_Name: FireTowerLv3.1
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 984432553404397776, guid: 9ca2bb2f6403dec40af3a2dfd2821e8c,
+    type: 3}
+  icon: {fileID: 21300000, guid: ae17102c29ed73b47b5de446588b61b9, type: 3}
+  towerName: Fire Tower Lv2
+  cost: 110
+  sellValue: 82
+  towerType: 2
+  damageType: 1
+  minDamage: 17
+  maxDamage: 20
+  fireRate: 1
+  range: 6.5
+  description: 'Constant stream of magical fire able to target multiple enemies and
+    slow them by 50%. '
+  effects:
+  - {fileID: 11400000, guid: a65a8bd36681a1a45a4147d845030f57, type: 2}
+  upgrade01: {fileID: 11400000, guid: b677e9670a807834bbaf525c80d72e87, type: 2}
+  upgrade02: {fileID: 0}

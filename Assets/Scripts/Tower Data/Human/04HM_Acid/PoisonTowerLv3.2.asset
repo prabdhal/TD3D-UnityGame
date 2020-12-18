@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6dd1c46bce08c42b3eb2c9d0d35811, type: 3}
+  m_Name: PoisonTowerLv3.2
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 6792032970361322492, guid: 3322f94ff4fddc24f8a019bf4de39566,
+    type: 3}
+  icon: {fileID: 21300000, guid: b76d91c868bfcda499b8569f96d738a3, type: 3}
+  towerName: Acid Tower Lv2
+  cost: 250
+  sellValue: 230
+  towerType: 1
+  damageType: 1
+  minDamage: 30
+  maxDamage: 35
+  fireRate: 1
+  range: 7
+  description: Enemies are poisoned for 5 seconds, taking 9 damage per second.
+  effects:
+  - {fileID: 11400000, guid: 834619e1c5fba7248989f11771e35e74, type: 2}
+  - {fileID: 11400000, guid: c9b1b2bf8d7f7704bafd344bf9a002bc, type: 2}
+  upgrade01: {fileID: 0}
+  upgrade02: {fileID: 0}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6dd1c46bce08c42b3eb2c9d0d35811, type: 3}
+  m_Name: PoisonTowerLv1.2
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 2572023725455001568, guid: 09d3e52841bca1843a478053ca85b88e,
+    type: 3}
+  icon: {fileID: 21300000, guid: 8b9b6740e5205104aa31f158da0eb7b2, type: 3}
+  towerName: Poison Tower Lv2
+  cost: 30
+  sellValue: 42
+  towerType: 1
+  damageType: 1
+  minDamage: 25
+  maxDamage: 30
+  fireRate: 1
+  range: 6.25
+  description: Fires empowered magical poison shots.
+  effects: []
+  upgrade01: {fileID: 11400000, guid: 0ab7239cd9d8d474fa8cbe318299318c, type: 2}
+  upgrade02: {fileID: 11400000, guid: e8c66ee03fe18e5489ba6d33919157af, type: 2}

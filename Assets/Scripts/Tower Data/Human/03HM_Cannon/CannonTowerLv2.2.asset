@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6dd1c46bce08c42b3eb2c9d0d35811, type: 3}
+  m_Name: CannonTowerLv2.2
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 2259070651888225679, guid: 918921dab49dac546b8681c7bdc92449,
+    type: 3}
+  icon: {fileID: 21300000, guid: c7f606c2bc72f584884b8d8f9c6b2320, type: 3}
+  towerName: Pyro Tower Lv2
+  cost: 225
+  sellValue: 200
+  towerType: 3
+  damageType: 0
+  minDamage: 90
+  maxDamage: 100
+  fireRate: 0.6
+  range: 5.75
+  description: Fires empowered explosive rounds dealing even greater area of effect
+    damage upon impact.
+  effects: []
+  upgrade01: {fileID: 0}
+  upgrade02: {fileID: 0}

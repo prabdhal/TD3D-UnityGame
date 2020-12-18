@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6dd1c46bce08c42b3eb2c9d0d35811, type: 3}
+  m_Name: BatTowerLv2
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 2831311638769979836, guid: 1415d0ece30d5744fbd0749866b48305,
+    type: 3}
+  icon: {fileID: 21300000, guid: 7b429ba36369ed945b65bb270bb977c1, type: 3}
+  towerName: Bat Tower Lv2
+  cost: 0
+  sellValue: 0
+  damageType: 0
+  minDamage: 0
+  maxDamage: 0
+  fireRate: 0
+  range: 0
+  effectType: 0
+  effectValue: 0
+  effectDuration: 0
+  effectDescription: 
+  upgrades: {fileID: 11400000, guid: 85ec212a0d21b9044b8411a28580f3e3, type: 2}

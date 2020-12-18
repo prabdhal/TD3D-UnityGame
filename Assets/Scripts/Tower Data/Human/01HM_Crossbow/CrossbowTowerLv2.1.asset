@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6dd1c46bce08c42b3eb2c9d0d35811, type: 3}
+  m_Name: CrossbowTowerLv2.1
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 7817819177851602299, guid: 1881b712f3c4aa048b56a88bf64998b3,
+    type: 3}
+  icon: {fileID: 21300000, guid: f95dc39d2fd65d94d9b4c671a27d949f, type: 3}
+  towerName: Heavy Crossbow Tower Lv1
+  cost: 100
+  sellValue: 72
+  towerType: 4
+  damageType: 0
+  minDamage: 42
+  maxDamage: 47
+  fireRate: 1
+  range: 7
+  description: Fires long-range heavy bolts able to penetrate 5 points of enemy armor.
+  effects:
+  - {fileID: 11400000, guid: a6e3ea08eb7cf6247b0dc0feb4e6ee87, type: 2}
+  upgrade01: {fileID: 11400000, guid: d3def07db72db8547958e02ac2cc1d0b, type: 2}
+  upgrade02: {fileID: 0}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6dd1c46bce08c42b3eb2c9d0d35811, type: 3}
+  m_Name: CrossbowTowerLv3.2
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 8347576358646357573, guid: 89bd5fd1aa894b6479978b185a199221,
+    type: 3}
+  icon: {fileID: 21300000, guid: 3aa0c94a8621c1b48aacfbd6f77ba8ee, type: 3}
+  towerName: Rapid-Fire Crossbow Tower Lv2
+  cost: 205
+  sellValue: 172
+  towerType: 4
+  damageType: 0
+  minDamage: 30
+  maxDamage: 35
+  fireRate: 2.5
+  range: 6.5
+  description: Fires empowered bolts.
+  effects: []
+  upgrade01: {fileID: 0}
+  upgrade02: {fileID: 0}

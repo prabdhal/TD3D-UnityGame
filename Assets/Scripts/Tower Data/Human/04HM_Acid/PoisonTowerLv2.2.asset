@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6dd1c46bce08c42b3eb2c9d0d35811, type: 3}
+  m_Name: PoisonTowerLv2.2
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 8625075177457443670, guid: 92549658d580de24799b480f0e88a253,
+    type: 3}
+  icon: {fileID: 21300000, guid: ae60efe5eb9878149865aa894e1090a7, type: 3}
+  towerName: Scorpia Tower Lv2
+  cost: 250
+  sellValue: 230
+  towerType: 1
+  damageType: 1
+  minDamage: 50
+  maxDamage: 55
+  fireRate: 1
+  range: 6.5
+  description: Poison shots are empowered.
+  effects:
+  - {fileID: 11400000, guid: d016f3aa9b5bac741a0294a430d6d29c, type: 2}
+  - {fileID: 11400000, guid: 10c7bd8e16f69c04ebd83e825831a8d2, type: 2}
+  upgrade01: {fileID: 0}
+  upgrade02: {fileID: 0}

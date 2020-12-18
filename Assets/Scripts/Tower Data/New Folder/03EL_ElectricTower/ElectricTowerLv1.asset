@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6dd1c46bce08c42b3eb2c9d0d35811, type: 3}
+  m_Name: ElectricTowerLv1
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 8497341400279745247, guid: 7191c595adff8b54b8f374e04dad2c3b,
+    type: 3}
+  icon: {fileID: 21300000, guid: 2b68922e660b37041b19930e78f4eef7, type: 3}
+  towerName: Electric Tower Lv1
+  cost: 100
+  sellValue: 50
+  damageType: 0
+  minDamage: 0
+  maxDamage: 0
+  fireRate: 1
+  range: 6
+  effectType: 0
+  effectValue: 0
+  effectDuration: 0
+  effectDescription: 
+  upgrades: {fileID: 11400000, guid: 16faedf827316b34aac5fb5171f00d99, type: 2}

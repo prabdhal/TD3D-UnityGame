@@ -1,0 +1,26 @@
+Version 1.2
+Enhancements:
+· Path Painter now uses the 3D Haven folders.
+· Path Painter now uses the 3D Haven menu.
+· Improved import scrip.
+· Added the first version of an API that for example can be used to paint paths along Pegasus splines (example in documentation).
+
+Fixes:
+· Fixed a glitch with the import package.
+
+Version 1.1
+
+Enhancements:
+· The paint button is now bigger.
+· Changed the size hotkeys to CTRL+Q/E. 
+· Updated for 2018.3 to use the new terrain API.
+· Path Painter can now be placed into any directory.
+· Single active terrain is now automatically selected on open.
+· Made the status bar hotkey tips adapting to OSX (CTRL/CMD).
+· Added visualization to show the active line (editable) and display when straight painting.
+· Added a workaround for the Unity bug that causes things not to not render over the terrain in 2018.3.
+· Updated warning message for non-square terrains to make it more clear that only square terrains are supported.
+ 
+Fixes:
+· Stop null pointer exceptions when the environment changes. Path Painter should now do a much better job recovering from these situations.
+· Avoided cursor pointer exceptions on OSX.

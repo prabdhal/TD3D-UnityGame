@@ -1,0 +1,56 @@
+Mail for technical support - vsquad.info@gmail.com
+
+Average polycount 2000 tris
+Textures - diffuse 512*512
+
+
+TAGS
+
+Check the tags in your scene. It should be:
+
+1. EnemyBug - assigned to every EnemyBug. We parented this cube to the chest area of creature. Without that - towers shoot to the pivot, bottom of legs
+2. Castle - Analog of EnemyBug ( assigned to TowerBug in the towers/gates )
+3. Castle_Destroyed
+4. Dead
+
+
+SCRIPTS
+
+1. Tower script.    Tower scripts assigned to every tower. Also it has new "Catcher" button. Turn it on in case of Catcher tower ( it uses not bullets but special attack )
+
+Shoot Element - object which generates bullets. Look At Obj - rotatable part of tower. Bullet - bullet. Dmg - damage. Shoot delay - delay between shooting
+
+2. TowerHp script.   Every tower has special Tower_Bug Cube with "Castle" tag. Our range creatures shoots on that cube and destroy towers. These cubes have BuildingHP scripts
+
+3. TowerBullet script.  Assign it to the bullet. Assign hits to this scripts also. Change the speed.
+
+4. TowerTrigger script.  Assign to special shere (Zone) in tower. Enemy detection area.
+
+///////
+
+5. Enemy script.  Analog of tower script but for the creatures.
+
+6. EnemyHp script.    Every Creature has health in their EnemyBug  cube. Towers shoot to that cube.
+
+7. EnemyBullet script.  For our future range creatures 
+
+///////
+
+8. WaveSpawn script.   Enemy spawn.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
