@@ -11,6 +11,8 @@ Skills Applied/Learned:
 
 - Engineered game to be playable on all devices like mobile, web and as standalone on PC/Laptop
 
+- Implemented particle effects for tower shots, build and sell animations as well as sound effects and game music 
+
 - Ensured stats were balanced to provide the perfect amount of difficulty
 
 - Created complex stats for tower, enemy and special items:
