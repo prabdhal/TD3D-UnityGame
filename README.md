@@ -1,3 +1,8 @@
+Description:
+A 3D tower defence game with 20 levels to complete. Earn up to 3 stars by completing levels without taking any castle damage. Use your rewards to buy tower upgrades and special items to help complete more difficult levels as your progress. You will be required to strategize with over 16 unique tower upgrades, 4 special items and 9 unique enemies, each of which have varying stats and resistances. 
+Controls:
+Use mouse to navigate through menus and to buy and place towers. Right and Left arrows to rotate camera angle in 90 degree intervals.
+
 Skills Applied/Learned: 
 - Programmed clean, modularized and reusable scripts with scriptable objects and object-orientated programming
 
@@ -37,5 +42,5 @@ tower effects:
 -> magic penetration
 -> area of effect damage 
 
-Access Game Instructions:
-1. Game is playable on the web using either a computer or mobile via my portfolio website with the following url: https://prabdhaliwal.com/game
+Access To Game:
+- Game is playable on the web via my portfolio website with the following url: https://prabdhaliwal.com/game 
