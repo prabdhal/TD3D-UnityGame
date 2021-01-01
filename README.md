@@ -36,3 +36,6 @@ tower effects:
 -> armour penetration
 -> magic penetration
 -> area of effect damage 
+
+Access Game Instructions:
+1. Game is playable on the web using either a computer or mobile via my portfolio website with the following url: https://prabdhaliwal.com/game
