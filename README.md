@@ -1,7 +1,7 @@
 Skills Applied/Learned: 
-- Programmed clean, modularized and reusable scripts with scriptable objects and Object-Orientated programming
+- Programmed clean, modularized and reusable scripts with scriptable objects and object-orientated programming
 
-- Utilized binary serialization to save and load user progress like scores, levels, bought shop items, upgrapdes, etc
+- Utilized binary serialization to save and load user progress like scores, levels, bought shop items, upgrades, etc
 
 - Kept the Update() function clean from any code that did not need to be called every frame for runtime efficiency 
 
