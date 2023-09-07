@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour
     public static float Score;
 
     [Header("Player Gold")]
-    public int startGold = 400;
+    public int startGold = 40000;
     public TextMeshProUGUI goldText;
     [Space]
     [Header("Player Health")]
