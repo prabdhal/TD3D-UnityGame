@@ -6668,36 +6668,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 745233467}
     m_Modifications:
+    - target: {fileID: 2013187113, guid: 4adcd241cc136b34fb92798ea7a2c3d2, type: 3}
+      propertyPath: m_VerticalFit
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2819131695421307182, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
         type: 3}
-      propertyPath: m_text
-      value: "Hello! Welcome to the 3D Tower Defence game. Your goal here is to protect
-        the castle from the incoming enemy waves. Before you start, it is important
-        that you understand the user interface to help you better navigate through
-        the game.\n\nSo, starting on the top left corner, you can view your current
-        gold, health and the current wave number out of the total waves in this level.
-        The settings icon on the top right corner can be used to toggle on or off
-        your game sound or music. The vertical bar consisting of 4 buttons to your
-        right, has all the items that can help make some difficult levels easier
-        to complete. the two buttons on the bottom right corner, are your play/pause
-        and fast forward buttons so that you can pause and think of strategies mid
-        game or  fast forward and make a level more difficult if needed. On the bottom
-        left corner, are right and left control pads, which allow you to rotate your
-        camera view in 90 degree intervals all around the game map. Finally, to get
-        started, you would need to build a tower by selecting the beige coloured
-        ground. You will then see a shop window appear in the bottom middle section
-        of your screen, here you can choose from 4 unique towers (given that you
-        have enough gold) to help defend your castle. After completing each level,
-        you will be rewarded with gold coins and gems, which can be used in the shops
-        (found in the main menu screen) to buy tower upgrades or special items to
-        be used in-game. Now that you understand the basics of this game, you are
-        ready to defend you castle.\n \nGood Luck!\n"
+      propertyPath: m_margin.w
+      value: -2.9167798
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819131695421307182, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 1.4207722
       objectReference: {fileID: 0}
     - target: {fileID: 2897625958520816090, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 450989017}
+    - target: {fileID: 3854460847652826377, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_ChildControlWidth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4860436320946815806, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6808,21 +6802,181 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialWindow
       objectReference: {fileID: 0}
-    - target: {fileID: 4860436320946815807, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4860436322450515164, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 450989017}
+    - target: {fileID: 4860436322613326150, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860436322613326150, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860436322613326150, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860436322613326150, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860436322613326150, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860436322613326150, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4860436322613326169, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 450989017}
+    - target: {fileID: 5170435185388484256, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_MovementType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170435185388484256, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_ScrollSensitivity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170435185388484256, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531431248434262949, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531431248434262949, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531431248434262949, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531431248434262949, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531431248434262949, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531431248434262949, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531431248434262949, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531431248434262949, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173091158361992591, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -135
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173091158361992591, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -249.6319
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173091158361992591, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 270.02362
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173091158361992591, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -124.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480070182331566980, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480070182331566980, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480070182331566980, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480070182331566980, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480070182331566980, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480070182331566980, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480070182331566980, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 245.00003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215101413878390755, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215101413878390755, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215101413878390755, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215101413878390755, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215101413878390755, guid: 4adcd241cc136b34fb92798ea7a2c3d2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4adcd241cc136b34fb92798ea7a2c3d2, type: 3}
 --- !u!1 &940958045296376956 stripped

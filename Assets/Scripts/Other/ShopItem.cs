@@ -31,13 +31,13 @@ namespace TowerDefence
             if (button == null)
                 button = GetComponentInChildren<Button>();
 
-            if (PlayerDataManager.Gem < cost)
-            {
-                button.interactable = false;
-            } else
-            {
-                button.interactable = true;
-            }
+            //if (PlayerDataManager.Gem < cost)
+            //{
+            //    button.interactable = false;
+            //} else
+            //{
+            //    button.interactable = true;
+            //}
         }
     }
 }
