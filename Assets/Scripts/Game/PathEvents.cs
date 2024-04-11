@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace TowerDefence
@@ -16,12 +14,12 @@ namespace TowerDefence
 
             if (Utils.Utilities.IsPointerOverUIObject())
                 return;
-            
+
             if (GameItemManager.activeItem)
             {
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                
+
                 if (Physics.Raycast(ray, out hit))
                 {
                     print(GameItemManager.activeItem);

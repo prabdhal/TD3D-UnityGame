@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace TowerDefence
@@ -32,7 +31,7 @@ namespace TowerDefence
         public static int Gem;
 
         [Header("Audio")]
-        [Range(0,1)]
+        [Range(0, 1)]
         public static float SoundValue;
         [Range(0, 1)]
         public static float MusicValue;
@@ -59,7 +58,7 @@ namespace TowerDefence
         public static int poisonTowerIndex01;
         public static int poisonTowerIndex02;
         public static int poisonTowerIndex03;
-        
+
         [Header("Level Progression")]
         public static List<int> starScoresPerLevel = new List<int>();
         public static int _levelsUnlocked = 1;
@@ -71,7 +70,7 @@ namespace TowerDefence
         public TowerUpgradeShopButton[] initFireButtonIndexes;
         public TowerUpgradeShopButton[] initCannonButtonIndexes;
         public TowerUpgradeShopButton[] initPoisonButtonIndexes;
-        
+
         public static List<TowerUpgradeShopButton> crossbowButtonIndexes = new List<TowerUpgradeShopButton>(3);
         public static List<TowerUpgradeShopButton> fireButtonIndexes = new List<TowerUpgradeShopButton>(3);
         public static List<TowerUpgradeShopButton> cannonButtonIndexes = new List<TowerUpgradeShopButton>(3);
@@ -80,7 +79,7 @@ namespace TowerDefence
         void Start()
         {
             main = MainMenuManager.instance;
-            
+
             if (crossbowButtonIndexes.Count <= 0)
             {
                 for (int i = 0; i < initCrossbowButtonIndexes.Length; i++)
@@ -91,11 +90,11 @@ namespace TowerDefence
                     poisonButtonIndexes.Add(initPoisonButtonIndexes[i]);
                 }
             }
-            
+
             LoadProgress();
             main.UpdateCurrency();
             SaveProgress(this);
-            
+
             currentScene = SceneManager.GetActiveScene();
         }
 
@@ -169,7 +168,7 @@ namespace TowerDefence
                 towerUpgradeShopButtons[i].UpdateBaseTextUI();
             }
         }
-        
+
         public void ResetProgressButton()
         {
             SaveSystem.DeleteData();

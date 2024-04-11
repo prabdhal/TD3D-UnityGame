@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace TowerDefence
 {
@@ -39,7 +37,7 @@ namespace TowerDefence
 
         public void GoldItem()
         {
-            if (PlayerDataManager.GoldItemAmount <= 0)
+            if (PlayerDataManager.GoldItemAmount <= 0 || GameManager.BeginTutorial)
                 return;
 
             PlayerDataManager.GoldItemAmount -= 1;
@@ -49,7 +47,7 @@ namespace TowerDefence
 
         public void BombItem()
         {
-            if (PlayerDataManager.BombItemAmount <= 0)
+            if (PlayerDataManager.BombItemAmount <= 0 || GameManager.BeginTutorial)
                 return;
 
             GameItemManager.activeItem = true;
@@ -57,7 +55,7 @@ namespace TowerDefence
 
         public void HealthItem()
         {
-            if (PlayerDataManager.HealthItemAmount <= 0)
+            if (PlayerDataManager.HealthItemAmount <= 0 || GameManager.BeginTutorial)
                 return;
 
             PlayerDataManager.HealthItemAmount -= 1;
@@ -67,7 +65,7 @@ namespace TowerDefence
 
         public void FreezeItem()
         {
-            if (PlayerDataManager.FreezeTimeItemAmount <= 0)
+            if (PlayerDataManager.FreezeTimeItemAmount <= 0 || GameManager.BeginTutorial)
                 return;
 
             PlayerDataManager.FreezeTimeItemAmount -= 1;

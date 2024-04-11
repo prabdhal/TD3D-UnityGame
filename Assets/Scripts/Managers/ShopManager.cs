@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TowerDefence
 {
@@ -18,13 +16,14 @@ namespace TowerDefence
         {
             playerDataManager = PlayerDataManager.instance;
             mainManager = MainMenuManager.instance;
+            //PlayerDataManager.Gem += 100;
         }
 
         public void BuyStartGold()
         {
             if (PlayerDataManager.Gem < goldCost)
                 return;
-           
+
             PlayerDataManager.Gem -= goldCost;
 
             PlayerDataManager.GoldItemAmount += 1;

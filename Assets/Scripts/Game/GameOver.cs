@@ -14,7 +14,7 @@ namespace TowerDefence
 
         private void Start()
         {
-            gameManager = GameManager.instance;
+            gameManager = GameManager.Instance;
         }
 
         private void OnEnable()

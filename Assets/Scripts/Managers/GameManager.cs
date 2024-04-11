@@ -1,29 +1,26 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using TMPro;
-using UnityEngine.EventSystems;
-using System.Collections.Generic;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace TowerDefence
 {
     public class GameManager : MonoBehaviour
     {
         #region Singleton
-        public static GameManager instance;
+        public static GameManager Instance;
 
         public void Awake()
         {
-            if (instance != null)
+            if (Instance != null)
             {
                 Debug.LogError("More than one GameManager in scene");
                 return;
             }
-            instance = this;
+            Instance = this;
         }
         #endregion
-        
+
         // Script References
         //PlayerDataManager playerDataManager;
         GameButtonManager buttonManager;
@@ -31,7 +28,8 @@ namespace TowerDefence
         PlayerStats playerStats;
         WaveManager waveManager;
         Rewards rewards;
-        SceneFader fader;
+        [SerializeField]
+        private SceneFader fader;
         Camera cam;
 
         // UI Scripts
@@ -61,6 +59,8 @@ namespace TowerDefence
         public static bool GameIsOver;
         public static bool IsPaused;
         public static bool BeginGame;
+        public static bool BeginTutorial;
+        public int activeTutorialWindow = 0;
         bool buttonActive;
         //bool isBatterySaving;
         [Space]
@@ -86,7 +86,8 @@ namespace TowerDefence
         public GameObject upgradeWindow;
         public GameObject dualUpgradeWindow;
         public GameObject shopWindow;
-        public GameObject tutorialWindow;
+        public GameObject[] tutorialWindow;
+        public GameObject[] tutorialBackgroundImages;
         public GameObject enemyInfoWindow;
         #endregion
         [Space]
@@ -105,7 +106,10 @@ namespace TowerDefence
             #region Game Components
             cam = Camera.main;
 
-            fader = FindObjectOfType<SceneFader>();
+            if (fader == null)
+                fader = FindObjectOfType<SceneFader>();
+            fader.gameObject.SetActive(true);
+
             audioManager = FindObjectOfType<AudioManager>();
             waveManager = FindObjectOfType<WaveManager>();
             buttonManager = FindObjectOfType<GameButtonManager>();
@@ -125,7 +129,7 @@ namespace TowerDefence
             dualTowerUpgradeUI.upgradeButton02.onClick.RemoveAllListeners();
             dualTowerUpgradeUI.sellButon.onClick.RemoveAllListeners();
             dualTowerUpgradeUI.swapButton.onClick.RemoveAllListeners();
-            
+
             confirmationTowerUI.yesButton.onClick.AddListener(InstantiateTowerButton);
             confirmationTowerUI.noButton.onClick.AddListener(CloseConfirmationWindow);
             towerUpgradeUI.upgradeButton.onClick.AddListener(UpgradeTowerButton01);
@@ -135,7 +139,7 @@ namespace TowerDefence
             dualTowerUpgradeUI.upgradeButton02.onClick.AddListener(UpgradeTowerButton02);
             dualTowerUpgradeUI.sellButon.onClick.AddListener(SellTowerButton);
             dualTowerUpgradeUI.swapButton.onClick.AddListener(dualTowerUpgradeUI.SwapButton);
-            
+
             #endregion
 
             currentScene = SceneManager.GetActiveScene();
@@ -163,15 +167,9 @@ namespace TowerDefence
         private void Update()
         {
             if (fader.doneFading)
-            {
                 fader.doneFading = false;
-            }
 
-            if (!PlayerDataManager.TutorialFinished && levelToUnlock == 2)
-            {
-                backgroundImage.SetActive(true);
-                tutorialWindow.SetActive(true);
-            }
+            TutorialHandler();
 
             if (newEnemyIndex > PlayerDataManager.EnemyLogIndex)
             {
@@ -179,7 +177,7 @@ namespace TowerDefence
                 enemyInfoWindow.SetActive(true);
             }
 
-            if (BeginGame && buttonActive == false)
+            if (BeginGame && buttonActive == false && PlayerDataManager.TutorialFinished)
             {
                 buttonActive = true;
                 buttonManager.EnableButtons();
@@ -196,6 +194,50 @@ namespace TowerDefence
             }
         }
 
+        #region Tutorial Handlers
+
+        private void TutorialHandler()
+        {
+            if (!PlayerDataManager.TutorialFinished && levelToUnlock == 2 && !BeginTutorial)
+            {
+                BeginTutorial = true;
+                activeTutorialWindow = 0;
+                UpdateTutorialWindow();
+            }
+        }
+
+        private void UpdateTutorialWindow()
+        {
+            for (int i = 0; i < tutorialWindow.Length; i++)
+            {
+                tutorialWindow[i].SetActive(false);
+                tutorialBackgroundImages[i].SetActive(false);
+            }
+
+            tutorialWindow[activeTutorialWindow].SetActive(true);
+            tutorialBackgroundImages[activeTutorialWindow].SetActive(true);
+        }
+
+        public void ContinueTutorialButton()
+        {
+            activeTutorialWindow++;
+            UpdateTutorialWindow();
+        }
+
+        public void FinishTutorialButton()
+        {
+            PlayerDataManager.TutorialFinished = true;
+            for (int i = 0; i < tutorialWindow.Length; i++)
+            {
+                tutorialWindow[i].SetActive(false);
+                tutorialBackgroundImages[i].SetActive(false);
+            }
+            backgroundImage.SetActive(false);
+            BeginTutorial = false;
+        }
+
+        #endregion
+
         #region Score Handlers
 
         public void LevelCompleted()
@@ -210,7 +252,7 @@ namespace TowerDefence
             if (PlayerDataManager.starScoresPerLevel.Count - 1 >= PlayerDataManager._levelsUnlocked - 2)
             {
                 int prevScore = PlayerDataManager.starScoresPerLevel[levelToUnlock - 2];
-                
+
                 // already full completed 
                 if (prevScore >= GetScore())
                 {
@@ -233,7 +275,7 @@ namespace TowerDefence
                     {
                         OneStarRewards(prevScore);
                     }
-                    
+
                     // Pass Save Data
                     PlayerDataManager.starScoresPerLevel[levelToUnlock - 2] = starScore;
                 }
@@ -473,9 +515,10 @@ namespace TowerDefence
         #endregion
 
         #region Button Functions
-        
+
         public void OpenSettings()
         {
+            if (BeginTutorial) return;
             Time.timeScale = 0;
 
             backgroundImage.SetActive(true);
@@ -532,7 +575,7 @@ namespace TowerDefence
 
             CloseAllWindowsButton();
         }
-        
+
         public void CloseAllWindowsButton()
         {
             settingsWindow.SetActive(false);
@@ -574,13 +617,6 @@ namespace TowerDefence
             audioManager.sellAudio.Play();
         }
 
-        public void FinishTutorialButton()
-        {
-            PlayerDataManager.TutorialFinished = true;
-            tutorialWindow.SetActive(false);
-            backgroundImage.SetActive(false);
-        }
-        
         public void NewEnemyAlertButton()
         {
             if (newEnemyAlertWindow == null || newEnemyThisLevel == null) return;
@@ -687,7 +723,7 @@ namespace TowerDefence
 
             confirmationTowerUI.UpdateUI(data);
         }
-        
+
         private void ShowUpgradeWindow()
         {
             upgradeWindow.SetActive(true);

@@ -30,7 +30,7 @@ namespace TowerDefence
 
         private void Start()
         {
-            gameManager = GameManager.instance;
+            gameManager = GameManager.Instance;
 
             rend = GetComponent<Renderer>();
             offset = new Vector3(-1.5f, 0, -1.5f);

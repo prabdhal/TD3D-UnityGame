@@ -1,9 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
-using TMPro;
-using System.Collections.Generic;
+﻿using TMPro;
+using UnityEngine;
 
 namespace TowerDefence
 {
@@ -24,7 +20,7 @@ namespace TowerDefence
         #endregion
 
         PlayerDataManager playerDataManager;
-        
+
         public SceneFader fader;
         [Space]
         [Header("Currency")]
@@ -42,7 +38,7 @@ namespace TowerDefence
         public GameObject enemyLogWindow;
         public GameObject settingsWindow;
         public GameObject confirmationWindow;
-        
+
 
         private void Start()
         {
@@ -51,8 +47,9 @@ namespace TowerDefence
 
             if (fader == null)
                 fader = FindObjectOfType<SceneFader>();
+            fader.gameObject.SetActive(true);
         }
-        
+
         #region Main Menu Window Functions
 
         public void OpenLevelSelector()
@@ -119,6 +116,11 @@ namespace TowerDefence
             confirmationWindow.SetActive(true);
         }
 
+        public void QuitButton()
+        {
+            Application.Quit();
+        }
+
         public void CloseAll()
         {
             levelWindow.SetActive(false);
@@ -135,7 +137,7 @@ namespace TowerDefence
         #endregion
 
         #region Button Functions
-        
+
         public void QuitGame()
         {
             Application.Quit();

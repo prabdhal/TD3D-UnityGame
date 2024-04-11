@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace TowerDefence
@@ -45,7 +43,7 @@ namespace TowerDefence
                 // update fastforward button
                 fastForwardButton.image.color = Color.white;
                 isFastFowarded = false;
-                
+
                 Time.timeScale = 0;
             }
             else
