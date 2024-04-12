@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 namespace TowerDefence
 {
@@ -47,6 +46,8 @@ namespace TowerDefence
         {
             soundBar.value = PlayerDataManager.SoundValue;
             musicBar.value = PlayerDataManager.MusicValue;
+            Debug.Log(PlayerDataManager.SoundValue);
+            Debug.Log(PlayerDataManager.MusicValue);
         }
 
         // Update is called once per frame

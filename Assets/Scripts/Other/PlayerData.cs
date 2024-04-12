@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace TowerDefence
 {
@@ -18,7 +17,7 @@ namespace TowerDefence
         public int healthItemAmount;
         public int bombItemAmount;
         public int freezeTimeItemAmount;
-        
+
         [Header("Level Scores")]
         public static List<int> starScoresPerLevel = new List<int>();
         public int levelsUnlocked = 1;
@@ -39,14 +38,14 @@ namespace TowerDefence
         public List<int> crossbowUpgradeShopButtonIndexes = new List<int>(3);
         public List<int> fireUpgradeShopButtonIndexes = new List<int>(3);
         public List<int> cannonUpgradeShopButtonIndexes = new List<int>(3);
-        public List<int> poisonUpgradeShopButtonIndexes = new List<int>(3); 
-        
+        public List<int> poisonUpgradeShopButtonIndexes = new List<int>(3);
+
         public List<int> levelStars = new List<int>();
-        [Range(0,1)]
+        [Range(0, 1)]
         public float soundValue;
         [Range(0, 1)]
         public float musicValue;
-        
+
         public PlayerData(PlayerDataManager playerDataManager)
         {
             tutorialFinished = PlayerDataManager.TutorialFinished;
@@ -56,6 +55,9 @@ namespace TowerDefence
 
             soundValue = PlayerDataManager.SoundValue;
             musicValue = PlayerDataManager.MusicValue;
+
+            Debug.Log("Saving Sound Value: " + soundValue);
+            Debug.Log("Saving Music Value: " + musicValue);
 
             enemyLogIndex = PlayerDataManager.EnemyLogIndex;
 
@@ -70,7 +72,7 @@ namespace TowerDefence
             {
                 levelStars.Add(PlayerDataManager.starScoresPerLevel[i]);
             }
-            
+
             arrowTowerIndex01 = PlayerDataManager.arrowTowerIndex01;
             arrowTowerIndex02 = PlayerDataManager.arrowTowerIndex02;
             arrowTowerIndex03 = PlayerDataManager.arrowTowerIndex03;
@@ -83,7 +85,7 @@ namespace TowerDefence
             poisonTowerIndex01 = PlayerDataManager.poisonTowerIndex01;
             poisonTowerIndex02 = PlayerDataManager.poisonTowerIndex02;
             poisonTowerIndex03 = PlayerDataManager.poisonTowerIndex03;
-            
+
             //soundOn = main.turnOn;
         }
     }

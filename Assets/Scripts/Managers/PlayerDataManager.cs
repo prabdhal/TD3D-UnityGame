@@ -107,6 +107,8 @@ namespace TowerDefence
         {
             PlayerData data = SaveSystem.LoadData();
 
+            Debug.Log("Loading Data: " + data);
+
             TutorialFinished = data.tutorialFinished;
 
             // currency progress
@@ -115,6 +117,9 @@ namespace TowerDefence
 
             SoundValue = data.soundValue;
             MusicValue = data.musicValue;
+
+            Debug.Log("Loaded Sound Value " + data.soundValue);
+            Debug.Log("Loaded Music Value " + data.musicValue);
 
             EnemyLogIndex = data.enemyLogIndex;
 
@@ -185,6 +190,9 @@ namespace TowerDefence
 
             SoundValue = 1;
             MusicValue = 1;
+
+            Debug.Log("Setting static var of SoundValue to: " + SoundValue);
+            Debug.Log("Setting static var of MusicValue to: " + MusicValue);
 
             // Player Level Progress Reset
             _levelsUnlocked = 1;
