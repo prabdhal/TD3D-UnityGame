@@ -5,8 +5,8 @@ I'm excited to announce that Tower Defence 3D is now available for early access 
 
 To become a qualified tester and gain access to the game, please follow these steps:
 
-> Send an email to prab.dhaliwal95@gmail.com with the subject: **Tower Defence 3D Early Access Request**.
-> In the email, provide your Gmail ID.
++ Send an email to prab.dhaliwal95@gmail.com with the subject: **Tower Defence 3D Early Access Request**.
++ In the email, provide your Gmail ID.
 
 Once you've completed these steps, I'll add you to the list of testers and send you a private Google Play Store link to download and play Tower Defence 3D.
 
