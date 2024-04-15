@@ -1,3 +1,25 @@
+# Tower Defence 3D - Early Access Testing
+**Attention Developers and GitHub Users!**
+
+I'm excited to announce that Tower Defence 3D is now available for early access testing on the Google Play Store! 🎮
+
+To become a qualified tester and gain access to the game, please follow these steps:
+
+> Send an email to prab.dhaliwal95@gmail.com with the subject: **Tower Defence 3D Early Access Request**.
+> In the email, provide your Gmail ID.
+
+Once you've completed these steps, I'll add you to the list of testers and send you a private Google Play Store link to download and play Tower Defence 3D.
+
+Your feedback and insights are invaluable in helping me improve the game before its official release. I can't wait for you to experience Tower Defence 3D and share your thoughts!
+
+If you have any questions or need assistance, feel free to reach out.
+
+Let's defend the tower together! 🏰💥
+
+Warm regards,
+Prab & Tower Defence 3D Team
+
+
 Description:
 A 3D tower defence game with 20 levels to complete. Earn up to 3 stars by completing levels without taking any castle damage. Use your rewards to buy tower upgrades and special items to help complete more difficult levels as your progress. You will be required to strategize with over 16 unique tower upgrades, 4 special items and 9 unique enemies, each of which have varying stats and resistances. 
 Controls:
